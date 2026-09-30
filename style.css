@@ -1,0 +1,662 @@
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+html {
+    scroll-behavior: smooth;
+}
+
+body {
+    font-family: Arial, sans-serif;
+    background: #fff5f8;
+    color: #5a3d46;
+    overflow-x: hidden;
+}
+
+
+/* =========================
+   HERO
+========================= */
+
+.hero {
+    min-height: 100vh;
+    min-height: 100svh;
+
+    display: flex;
+    justify-content: center;
+    align-items: center;
+
+    text-align: center;
+
+    background: linear-gradient(
+        135deg,
+        #ffd6e5,
+        #fff0f5,
+        #ffe4ec
+    );
+
+    position: relative;
+    overflow: hidden;
+
+    padding: 40px 20px;
+}
+
+.hero-content {
+    width: 100%;
+    max-width: 700px;
+    padding: 30px;
+
+    z-index: 2;
+}
+
+.small-text {
+    font-size: 14px;
+    letter-spacing: 4px;
+    margin-bottom: 20px;
+    color: #a85b72;
+}
+
+.hero h1 {
+    font-size: clamp(45px, 8vw, 70px);
+    line-height: 1;
+
+    color: #d84f76;
+
+    margin-bottom: 25px;
+
+    text-shadow: 3px 3px 0px #ffffff;
+}
+
+.hero h2 {
+    font-size: clamp(22px, 4vw, 30px);
+    margin-bottom: 20px;
+}
+
+.hero h2 span {
+    color: #d84f76;
+}
+
+.description {
+    font-size: clamp(15px, 2vw, 17px);
+    line-height: 1.7;
+
+    max-width: 550px;
+    margin: auto;
+}
+
+
+/* =========================
+   BUTTON
+========================= */
+
+button {
+    margin-top: 30px;
+
+    padding: 14px 28px;
+
+    border: none;
+    border-radius: 30px;
+
+    background: #d84f76;
+    color: white;
+
+    font-size: 16px;
+    font-weight: bold;
+
+    cursor: pointer;
+
+    transition: 0.3s;
+}
+
+button:hover {
+    transform: scale(1.08);
+    background: #c63f67;
+}
+
+
+/* =========================
+   BALON
+========================= */
+
+.balloon {
+    position: absolute;
+
+    font-size: clamp(45px, 7vw, 80px);
+
+    animation: float 4s ease-in-out infinite;
+
+    user-select: none;
+}
+
+.balloon1 {
+    left: 8%;
+    top: 15%;
+}
+
+.balloon2 {
+    right: 10%;
+    top: 20%;
+
+    animation-delay: 1s;
+}
+
+.balloon3 {
+    left: 15%;
+    bottom: 10%;
+
+    animation-delay: 2s;
+}
+
+@keyframes float {
+
+    0%,
+    100% {
+        transform: translateY(0);
+    }
+
+    50% {
+        transform: translateY(-25px);
+    }
+}
+
+
+/* =========================
+   SURAT
+========================= */
+
+.surat {
+    min-height: 100vh;
+    min-height: 100svh;
+
+    display: flex;
+    justify-content: center;
+    align-items: center;
+
+    padding: 70px 20px;
+
+    background: #fff8fa;
+}
+
+.card {
+    width: 100%;
+    max-width: 650px;
+
+    background: white;
+
+    padding: 50px;
+
+    border-radius: 25px;
+
+    text-align: center;
+
+    box-shadow: 0 15px 40px rgba(180, 80, 110, 0.15);
+}
+
+.icon {
+    font-size: 60px;
+    margin-bottom: 15px;
+}
+
+.card h2 {
+    font-size: clamp(28px, 5vw, 35px);
+
+    color: #d84f76;
+
+    margin-bottom: 25px;
+}
+
+.card p {
+    font-size: 17px;
+    line-height: 1.8;
+
+    margin-bottom: 15px;
+}
+
+.signature {
+    color: #d84f76;
+    font-weight: bold;
+}
+
+
+/* =========================
+   GALLERY
+========================= */
+
+.gallery {
+    padding: 80px 20px;
+
+    text-align: center;
+
+    background: #ffe9f0;
+}
+
+.gallery h2 {
+    font-size: clamp(30px, 5vw, 40px);
+
+    color: #d84f76;
+
+    margin-bottom: 10px;
+}
+
+.gallery > p {
+    margin-bottom: 40px;
+}
+
+
+/* CONTAINER FOTO */
+
+.photos {
+    width: 100%;
+    max-width: 900px;
+
+    margin: 0 auto;
+
+    display: flex;
+
+    justify-content: center;
+    align-items: flex-start;
+
+    gap: 20px;
+
+    flex-wrap: wrap;
+}
+
+
+/* KOTAK FOTO */
+
+.photo {
+    width: 220px;
+
+    background: white;
+
+    padding: 10px;
+
+    border-radius: 15px;
+
+    box-shadow: 0 10px 25px rgba(150, 60, 90, 0.15);
+
+    transition: 0.3s;
+}
+
+
+/* FOTO */
+
+.photo img {
+    width: 100%;
+    height: 250px;
+
+    object-fit: cover;
+
+    border-radius: 10px;
+
+    display: block;
+}
+
+
+/* FOTO SAAT DISENTUH */
+
+.photo:hover {
+    transform: translateY(-10px) rotate(1deg);
+}
+
+
+/* TEXT FOTO */
+
+.photo p {
+    text-align: center;
+
+    padding: 10px 0 5px;
+
+    margin: 0;
+
+    font-weight: bold;
+}
+
+
+/* =========================
+   MESSAGE
+========================= */
+
+.message {
+    min-height: 100vh;
+    min-height: 100svh;
+
+    display: flex;
+
+    justify-content: center;
+    align-items: center;
+
+    padding: 70px 20px;
+
+    text-align: center;
+
+    background: #fff5f8;
+}
+
+.message-box {
+    width: 100%;
+    max-width: 700px;
+}
+
+.emoji {
+    font-size: clamp(50px, 8vw, 70px);
+}
+
+.message h2 {
+    font-size: clamp(30px, 5vw, 40px);
+
+    color: #d84f76;
+
+    margin: 20px 0;
+}
+
+.message p {
+    font-size: 18px;
+
+    line-height: 1.8;
+
+    margin-bottom: 15px;
+}
+
+.message h3 {
+    margin-top: 30px;
+
+    color: #a85b72;
+}
+
+.message h1 {
+    font-size: clamp(25px, 5vw, 40px);
+
+    color: #d84f76;
+
+    margin-top: 10px;
+}
+
+
+/* =========================
+   FOOTER
+========================= */
+
+footer {
+    padding: 25px 20px;
+
+    text-align: center;
+
+    background: #d84f76;
+
+    color: white;
+
+    font-size: 14px;
+}
+
+
+/* =================================================
+   TABLET
+================================================= */
+
+@media (max-width: 768px) {
+
+    .hero {
+        padding: 30px 15px;
+    }
+
+    .hero-content {
+        padding: 20px;
+    }
+
+    .balloon1 {
+        left: 3%;
+        top: 10%;
+    }
+
+    .balloon2 {
+        right: 3%;
+        top: 12%;
+    }
+
+    .balloon3 {
+        left: 5%;
+        bottom: 8%;
+    }
+
+    .card {
+        padding: 40px 30px;
+    }
+
+    .photos {
+        gap: 15px;
+    }
+
+    .photo {
+        width: 200px;
+    }
+
+    .photo img {
+        height: 230px;
+    }
+}
+
+
+/* =================================================
+   HP
+================================================= */
+
+@media (max-width: 600px) {
+
+    /* HERO */
+
+    .hero {
+        min-height: 100svh;
+
+        padding: 30px 15px;
+    }
+
+    .hero-content {
+        padding: 15px;
+    }
+
+    .small-text {
+        font-size: 11px;
+
+        letter-spacing: 2px;
+
+        margin-bottom: 15px;
+    }
+
+    .hero h1 {
+        font-size: 48px;
+
+        margin-bottom: 20px;
+    }
+
+    .hero h2 {
+        font-size: 22px;
+
+        line-height: 1.4;
+    }
+
+    .description {
+        font-size: 15px;
+
+        line-height: 1.6;
+    }
+
+    button {
+        padding: 12px 22px;
+
+        font-size: 14px;
+    }
+
+
+    /* BALON */
+
+    .balloon {
+        font-size: 45px;
+    }
+
+    .balloon1 {
+        left: 2%;
+        top: 8%;
+    }
+
+    .balloon2 {
+        right: 2%;
+        top: 10%;
+    }
+
+    .balloon3 {
+        left: 5%;
+        bottom: 5%;
+    }
+
+
+    /* SURAT */
+
+    .surat {
+        min-height: auto;
+
+        padding: 60px 15px;
+    }
+
+    .card {
+        padding: 30px 20px;
+
+        border-radius: 20px;
+    }
+
+    .icon {
+        font-size: 50px;
+    }
+
+    .card h2 {
+        font-size: 28px;
+    }
+
+    .card p {
+        font-size: 15px;
+
+        line-height: 1.7;
+    }
+
+
+    /* GALLERY */
+
+    .gallery {
+        padding: 60px 15px;
+    }
+
+    .gallery h2 {
+        font-size: 30px;
+    }
+
+    .gallery > p {
+        font-size: 14px;
+
+        line-height: 1.6;
+
+        margin-bottom: 30px;
+    }
+
+    .photos {
+        display: grid;
+
+        grid-template-columns: repeat(2, 1fr);
+
+        gap: 15px;
+
+        width: 100%;
+    }
+
+    .photo {
+        width: 100%;
+
+        padding: 8px;
+
+        border-radius: 12px;
+    }
+
+    .photo img {
+        width: 100%;
+
+        height: 220px;
+
+        object-fit: cover;
+    }
+
+    .photo p {
+        font-size: 13px;
+
+        padding: 8px 0 3px;
+    }
+
+
+    /* MESSAGE */
+
+    .message {
+        min-height: auto;
+
+        padding: 70px 20px;
+    }
+
+    .message p {
+        font-size: 15px;
+
+        line-height: 1.7;
+    }
+
+
+    /* FOOTER */
+
+    footer {
+        font-size: 12px;
+
+        padding: 20px 15px;
+    }
+}
+
+
+/* =================================================
+   HP KECIL
+================================================= */
+
+@media (max-width: 400px) {
+
+    .hero h1 {
+        font-size: 42px;
+    }
+
+    .hero h2 {
+        font-size: 20px;
+    }
+
+    .small-text {
+        font-size: 10px;
+    }
+
+    .balloon {
+        font-size: 35px;
+    }
+
+
+    /* FOTO SATU-SATU */
+
+    .photos {
+        grid-template-columns: 1fr;
+
+        max-width: 260px;
+    }
+
+    .photo {
+        width: 100%;
+    }
+
+    .photo img {
+        height: 280px;
+    }
+
+    .card {
+        padding: 25px 17px;
+    }
+}
